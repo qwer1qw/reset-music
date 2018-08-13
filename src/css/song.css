@@ -91,7 +91,7 @@
 /*lyric*/
 .page .lyric-container{
     flex-grow: 1;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
     padding-top: 21px;
     color: white;
 }
@@ -126,6 +126,7 @@
 .page .load{
     display: flex;
     justify-content: space-around;
+    align-items: center;
     margin-bottom: 7px;
     font-size: 18px;
 }
