@@ -43,6 +43,7 @@
             this.$el.find('.disk').removeClass('playing')
 
         },
+        /*歌词滚动与高亮*/
         showLyric(time){
             let allPTab = this.$el.find('.lyric-container > .lyrics > .lines > p')
             let p
