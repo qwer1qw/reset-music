@@ -28,7 +28,7 @@
     position: relative;
 }
 .page .disk-container .logo{
-    position: fixed;
+    position: absolute;
     top: 12px;
     left: 12px;
     width: 100px;
@@ -55,9 +55,10 @@
     width: 78vw;
 }
 .page .disk-container .disk .song-img{
-    position: absolute;
     width: 49vw;
     border-radius: 50%;
+    position: absolute;
+    outline: 1px solid transparent;
 }
 .page .disk-container .disk .song-ring,
 .page .disk-container .disk .song-halo,
