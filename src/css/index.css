@@ -1,0 +1,238 @@
+body{
+    font-size: 14px;
+    font-family: Helvetica, sans-serif;
+}
+.container{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+.special{
+    font-size: 17px;
+    border-left: 2px solid #d43c33;
+    padding-left: 2vw;
+}
+
+.icon-sq {
+    width: 12px;
+    height: 12px;
+    vertical-align: -4px;
+    fill: currentColor;
+    overflow: hidden;
+}
+
+.icon-bofang {
+    width: 24px;
+    height: 24px;
+    vertical-align: -1em;
+}
+
+
+/* top-logo */
+.container .top-nav{
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    border-bottom: 1px solid #E8E8E8;
+}
+.container .top-nav .top-logo{
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #d43c33;
+}
+.container .top-nav .top-logo .topsvg{
+    padding-left: 2.5vw;
+    width: 158px;
+    height: 60px;
+}
+.container .top-nav .top-logo a{
+    font-size: 15px;
+    color: white;
+    margin-right: 3vw;
+    border-radius: 35%/100%;
+    padding: 5px 10px;
+    border: 0.5px solid #EA9D99;
+    border-radius: 37.5%/100%;
+}
+.container .top-nav .nav-bar ol{
+    font-size: 15px;
+    display: flex;
+    justify-content: space-around;
+    background: white;
+}
+.container .top-nav .nav-bar ol li{
+    width: 33.3%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+.container .top-nav .nav-bar ol li div{
+    padding: 10px 5px;
+    padding-bottom: 8px;
+    margin-bottom: -1px;
+    border-bottom: 2px solid transparent;
+}
+.container .top-nav .nav-bar ol li.active div{
+    color: #d43c33;
+    border-bottom: 2px solid #d43c33;
+}
+
+
+.container .all-tab{
+    margin-top:105px;
+}
+
+/* page-1 */
+/* play-list */
+.page-1{
+    display: none;
+}
+.container .all-tab .page-1 .play-list{
+    margin-top: 17px;
+}
+.container .all-tab .page-1 .play-list > .play-list-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 14px;
+}
+.container .all-tab .page-1 .play-list > .play-list-container .row{
+    width: 32.8%;
+    margin-bottom: 16px;
+}
+.container .all-tab .page-1 .play-list > .play-list-container .row img{
+    width: 100%;
+}
+.container .all-tab .page-1 .play-list > .play-list-container .row span{
+    padding-left: 1.9vw;
+    padding-right: 1.9vw;
+    font-size: 13px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+}
+
+/* song-list */
+.container .all-tab .page-1 .song-list{
+    margin-top: 19px;
+} 
+.page-1 .song-list .song-list-container{
+    margin-top: 15px;
+    padding-left: 10px;
+}
+
+.page-1 .song-list .song-list-container a{
+    display: block;
+    border-bottom: 1px solid #F1F1F2;
+    position: relative;
+    padding-bottom: 7px;
+    padding-top: 7px;
+}
+.page-1 .song-list .song-list-container a p{
+    font-size: 17px;
+    color: black;
+}
+.page-1 .song-list .song-list-container a span{
+    font-size: 12px;
+    color: #888;
+}
+.page-1 .song-list .song-list-container a .icon-bofang{
+    position: absolute;
+    top: 50%;
+    right: 8px;
+    transform: translateY(-50%);
+}
+/* footer */
+.all-tab .page-1 .footer{
+    text-align: center;
+    background: url(//s3.music.126.net/m/s/img/recommand_bg_2x.png?d045fafc60e017b653f8065a87496922);
+    background-size: cover;
+    padding-top: 18%;
+    padding-bottom: 17px;
+    margin-top: 4px;
+}
+.all-tab .page-1 .footer .footer-logo .logosvg{
+    height: 46px;
+    width: 232px;
+}
+.all-tab .page-1 .footer a{
+    display: inline-block;
+    font-size: 16px;
+    color: #d43c33;
+    border: 1px solid #d43c33;
+    padding: 7px 47px;
+    border-radius: 14%/100%;
+    margin-top: 11px;
+    margin-bottom: 4px
+}
+.all-tab .page-1 .footer p{
+    color: #888;
+    font-size: 12px;
+    line-height: 16px;
+    transform: scale(.75);
+}
+/* page-1 */
+
+
+/* page-2 */
+.page-2{
+    display: none;
+}
+.page-2 .song-list{
+    padding-left: 10px;
+    position: relative;
+}
+
+.page-2 .song-list .song-container{
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+}
+.page-2 .song-list .song-container .left{
+    font-size: 17px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    color: red;
+}
+.page-2 .song-list .song-container .right{
+    flex-grow: 1;
+    border-bottom: 1px solid #F1F1F2;
+    position: relative;
+    padding-bottom: 7px;
+    padding-top: 7px;
+}
+.page-2 .song-list .song-container .right a p{
+    font-size: 17px;
+}
+.page-2 .song-list .song-container .right a span{
+    font-size: 12px;
+    color: #888;
+}
+.page-2 .song-list .song-container .right a .icon-bofang{
+    position: absolute;
+    top: 50%;
+    right: 8px;
+    transform: translateY(-50%);
+}
+
+
+
+/*page-3*/
+.page-3{
+    display: none;
+}
+
+
+.page-1.active,
+.page-2.active,
+.page-3.active{
+    display: block;
+}

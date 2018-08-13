@@ -1,0 +1,140 @@
+.bg{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    filter: blur(50px);
+    z-index: -1;
+    background-size: cover;
+}
+.page{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+@keyframes circle{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+/*disk*/
+.page .disk-container{
+    position: relative;
+}
+.page .disk-container .logo{
+    position: fixed;
+    top: 12px;
+    left: 12px;
+    width: 100px;
+}
+.page .disk-container .pointer{
+    width: 26vw;
+    position: absolute;
+    top: 0;
+    left: 45vw;
+    z-index: 1;
+}
+.page .disk-container .disk{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20vw;
+
+}
+.page .disk-container .disk .song-ring{
+    position: absolute;
+    width: 78vw;
+}
+.page .disk-container .disk .song-halo{
+    width: 78vw;
+}
+.page .disk-container .disk .song-img{
+    position: absolute;
+    width: 49vw;
+    border-radius: 50%;
+}
+.page .disk-container .disk .song-ring,
+.page .disk-container .disk .song-halo,
+.page .disk-container .disk .song-img{
+    animation: circle 20s infinite linear;
+    animation-play-state: paused;
+}
+.page .disk-container .disk.playing .song-ring,
+.page .disk-container .disk.playing .song-halo,
+.page .disk-container .disk.playing .song-img{
+    animation-play-state: running;
+}
+
+.page .disk-container .disk .icon-botton{
+    position: absolute;
+    z-index: 1;
+}
+.icon {
+    height: 17vw;
+    width: 17vw;
+    display: none;
+}
+.icon.active{
+    display: block;
+}
+
+
+
+
+/*lyric*/
+.page .lyric-container{
+    flex-grow: 1;
+    margin-bottom: 20px;
+    padding-top: 21px;
+    color: white;
+}
+.page .lyric-container .song{
+    text-align: center;
+    font-size: 18px;
+}
+.page .lyric-container .song .song-singer{
+    font-size: 16px;
+    color: hsla(0,0%,100%,.6);
+}
+.page .lyric-container .lyrics{
+    font-size: 16px;
+    margin-top: 13px;
+    text-align: center;
+    height: 87px;
+    overflow: hidden;
+}
+.page .lyric-container .lyrics .lines{
+    transition: all 0.7s;
+}
+.page .lyric-container .lyrics .lines p{
+    padding-bottom: 10px;
+    color: hsla(0,0%,100%,.6);
+}
+.page .lyric-container .lyrics .lines p.active{
+    color: white;
+}
+
+
+/*footer*/
+.page .load{
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 7px;
+    font-size: 18px;
+}
+.page .load a{
+    color: #d33a31;
+    border: 1px solid #d33a31;
+    padding: 7px 64px;
+    border-radius: 25%/100%;
+}
+.page .load a.main{
+    color: white;
+    background: #d33a31;
+}

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/song.css">
+    <script src="//at.alicdn.com/t/font_769934_210awrwytqd.js"></script>
+    <title>播放歌曲</title>
+    <style type="text/css">
+    </style>
+</head>
+
+<body>
+    <div class="bg"></div>
+    <main class="page">
+        <audio src=""></audio>
+        <section class="disk-container">
+            <img class="logo" src="https://s3.music.126.net/m/s/img/logo.png?0c21b75d22d52b65dc8083343d161fe4" alt="">
+            <img class="pointer" src="https://s3.music.126.net/m/s/img/needle-ip6.png?be4ebbeb6befadfcae75ce174e7db862" alt="">
+            <div class="disk">
+                <div class="icon-botton">
+                    <svg class="icon icon-play active" aria-hidden="true">
+                        <use xlink:href="#icon-bofang3"></use>
+                    </svg>
+                    <svg class="icon icon-pause" aria-hidden="true">
+                        <use xlink:href="#icon-zanting1"></use>
+                    </svg>
+                </div>
+                <img class="song-ring" src="https://s3.music.126.net/m/s/img/disc-ip6.png?69796123ad7cfe95781ea38aac8f2d48" alt="">
+                <img class="song-halo" src="https://s3.music.126.net/m/s/img/disc_light-ip6.png?996fc8a2bc62e1ab3f51f135fc459577" alt="">
+                <img class="song-img" src="" alt="">
+            </div>
+        </section>
+        <section class="lyric-container">
+            <div class="song">
+                <span class="song-name">__name__</span>
+                -
+                <span class="song-singer">__singer__</span>
+            </div>
+            <div class="lyrics">
+                <div class="lines">
+                   
+                </div>
+            </div>
+        </section>
+        <footer class="load">
+            <a href="#">打开</a>
+            <a href="#" class="main">下载</a>
+        </footer>
+    </main>
+    <script src="../node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="../node_modules/leancloud-storage/dist/av-min.js"></script>
+    <script src="./js/av-init.js"></script>
+    <script src="./js/eventHub.js"></script>
+    <script src="./js/song/app.js"></script>
+</body>
+
+</html>

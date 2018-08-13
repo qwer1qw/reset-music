@@ -1,0 +1,147 @@
+body{
+    display:flex;
+    justify-content:center;
+    align-items: center;
+    height: 100vh;
+    font-family: Helvetica, sans-serif;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    height: 70vh;
+    width:60vw;
+    border: 2px solid #d43c33;
+    border-radius: 7px;
+}
+
+/*logo*/
+.container .logo{
+    background: #d43c33;
+    padding: 12px 0;
+    padding-left: 8px;
+}
+.container .logo .topsvg{
+    width: 200px;
+}
+.container .song-container{
+    display: flex;
+    flex-grow: 1;
+}
+/*song-list*/
+.container .song-container .song-list{
+    width: 150px;
+    overflow: auto;
+    border-right: 2px solid #d43c33;
+}
+.container .song-container .song-list ol li{
+    overflow: hidden;
+    text-overflow:ellipsis;
+    white-space: nowrap;
+    border-bottom: 1px solid #ddd; 
+    padding: 10px;
+    padding-right: 20px;
+    font-size: 15px;
+    cursor: pointer;
+}
+.container .song-container .song-list ol li.active{
+    background: #ddd;
+}
+/*上传区域*/
+.container .song-container .song-upload.active{
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container .song-container .song-upload{
+    display: none;
+}
+.container .song-container .song-upload #upload-container{
+    border: 2px dashed #d43c33;
+    border-radius: 10px;
+    display: flex;
+    padding: 13vh 10vw;
+}
+.container .song-container .song-upload #upload-container #upload{
+    
+    text-align: center;
+    cursor: pointer;
+}
+/*form*/
+.container .song-container .song-form{
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+.container .song-container .song-form.active{
+    display: flex;
+}
+.container .song-container .song-form .row{
+    display: flex;
+    padding: 5px 2px;
+}
+.container .song-container .song-form .song label{
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    margin-right: 4px;
+}
+.container .song-container .song-form .song input,
+.container .song-container .song-form .song textarea{
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 5px 0;
+    padding-left: 5px;
+    font-size: 12px;
+    line-height: 16px;
+}
+.container .song-container .song-form .song input:focus{
+    outline: none;
+}
+.container .song-container .song-form .song textarea:focus{
+    outline: none;
+}
+.container .song-container .song-form button{
+    border: none;
+    border: 1px solid #d43c33;
+    border-radius: 16px;
+    padding: 7px 90px;
+    background: #d43c33;
+}
+.container .song-container .song-form button:focus{
+    outline: none;
+}
+.container .song-container .song-form button:hover{
+    background: #dd4e47;
+    box-shadow: 1px 1px 5px 0px rgba(73, 71, 71, 0.75);
+    transition: all 0.3s;
+}
+
+/*loading*/
+.loading{
+    flex-grow: 1;
+    /* z-index: 1; */
+    display: none;;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-size: 15px;
+}
+.loading.active{
+    display: flex;
+}
+.loading .loading-bar{
+    border: 1px solid #d43c33;
+    width: 15vw;
+    height: 2vh;
+    border-radius: 11px;
+}
+.loading .bar{
+    width: 0%;
+    height: 100%;
+    background: #cf544d;
+    border-radius: 11px;
+}
