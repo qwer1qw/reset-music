@@ -20,10 +20,12 @@
                 p.textContent = word
                 this.$el.find('.lines').append(p)
             })
+            this.$el.find('.song-img').attr('src', song.cover)
             this.$el.siblings('.bg').css('background-image', `url(${song.cover})`)
+            
             this.$el.find('.lyric-container .song-name').text(song.name)
             this.$el.find('.lyric-container .song-singer').text(song.singer)
-            this.$el.find('.disk .song-img').attr('src', song.cover)
+            // this.$el.find('.disk .song-img')[0].src = song.cover
             let audio = this.$el.find('audio').attr('src', song.url).get(0)
             audio.onended = ()=>{
                 this.pause()
@@ -31,6 +33,7 @@
             audio.ontimeupdate = ()=>{
                 this.showLyric(audio.currentTime)
             }
+            
         },
         play(){
             this.$el.find('audio')[0].play()

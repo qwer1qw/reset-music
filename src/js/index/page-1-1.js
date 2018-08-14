@@ -19,7 +19,6 @@
         },
         render(data) {
             let { songs } = data
-            console.log(songs)
             songs.map((song) => {
                 let $songTab = $(this.template
                     .replace('{{song.name}}', song.name)
@@ -51,6 +50,7 @@
             this.model = model
             this.model.find().then(() => {
                 this.view.render(this.model.data)
+                this.view.$el.find('.loading').removeClass('active')
             })
         }
     }

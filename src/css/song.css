@@ -48,22 +48,23 @@
 
 }
 .page .disk-container .disk .song-ring{
-    position: absolute;
     width: 78vw;
 }
 .page .disk-container .disk .song-halo{
+    position: absolute;
     width: 78vw;
 }
 .page .disk-container .disk .song-img{
-    width: 49vw;
+    width: 50vw;
     border-radius: 50%;
     position: absolute;
+    /* border: 1px solid transparent; */
     outline: 1px solid transparent;
 }
 .page .disk-container .disk .song-ring,
 .page .disk-container .disk .song-halo,
 .page .disk-container .disk .song-img{
-    animation: circle 20s infinite linear;
+    animation: circle 20s infinite linear running;
     animation-play-state: paused;
 }
 .page .disk-container .disk.playing .song-ring,
@@ -111,7 +112,7 @@
     overflow: hidden;
 }
 .page .lyric-container .lyrics .lines{
-    transition: all 0.7s;
+    transition: all 0.7s linear;
 }
 .page .lyric-container .lyrics .lines p{
     padding-bottom: 10px;
