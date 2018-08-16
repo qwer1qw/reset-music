@@ -25,7 +25,11 @@
                     .replace('{{song.singer}}', song.singer)
                     .replace('{{song.id}}', song.id)
                 )
-                this.$el.find('.song-list-container').append($songTab)
+                if(this.$el.find('.song-list-container').children().length > 10){
+                    return false
+                }else{
+                    this.$el.find('.song-list-container').append($songTab)
+                }
             })
         }
     }

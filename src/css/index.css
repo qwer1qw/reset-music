@@ -1,7 +1,6 @@
 body{
     font-size: 14px;
     font-family: Helvetica, sans-serif;
-    -webkit-tap-highlight-color: rgba(0,0,0,0);
 }
 .container{
     height: 100vh;
@@ -59,7 +58,7 @@ body{
     border-radius: 35%/100%;
     padding: 5px 10px;
     border: 0.5px solid #EA9D99;
-    border-radius: 37.5%/100%;
+    border-radius: 15px
 }
 .container .top-nav .nav-bar ol{
     font-size: 15px;
@@ -176,8 +175,8 @@ body{
     font-size: 16px;
     color: #d43c33;
     border: 1px solid #d43c33;
-    padding: 7px 47px;
-    border-radius: 14%/100%;
+    padding: 7px 40px;
+    border-radius: 25px;
     margin-top: 11px;
     margin-bottom: 4px
 }
@@ -193,6 +192,7 @@ body{
 /* page-2 */
 .page-2{
     display: none;
+    position: relative;
 }
 .page-2 .logo{
     position: relative;
@@ -274,15 +274,120 @@ body{
     right: 8px;
     transform: translateY(-50%);
 }
-
-
+.page-2 .footer{
+    margin-top: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #999;
+}
 
 /*page-3*/
 .page-3{
     display: none;
 }
+.page-3 .box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    padding-bottom: 13px;
+    position: relative;
+    border-bottom: 1px solid #F0F1F2;
+}
+.page-3 .box input{
+    background: #EBECEC;
+    border: none;
+    border-radius: 15px;
+    width: 100%;
+    height: 30px;
+    font-size: 14px;
+    margin-top: 7px;
+    padding: 0 30px;
+}
+.page-3 .box input:focus{
+    outline: none;
+}
+.page-3 .box .icon-sousuo {
+    position: absolute;
+    top: 22px;
+    left: 17px;
+    width: 20px;
+    height: 20px;
+    fill: currentColor;
+    overflow: hidden;
+}
+.page-3 .box .icon-delete{
+    position: absolute;
+    top: 23px;
+    right: 17px;
+    width: 17px;
+    height: 17px;
+    fill: currentColor;
+    overflow: hidden;
+}
+.page-3 .box .icon-delete.hide{
+    display: none;
+}
+.page-3 .hot.hide{
+    display: none;
+}
+.page-3 .hot p{
+    font-size: 12px;
+    color: #666;
+    padding-top: 12px;
+    padding-left: 10px;
+    padding-bottom: 3px;
+}
+.page-3 .hot ol{
+    display: flex;
+    flex-wrap: wrap;
+}
+.page-3 .hot ol li{
+    padding: 4px 15px;
+    color: #333;
+    font-size: 14px;
+    border: 1px solid #E7E8EB;
+    border-radius: 26px;
+    margin: 5px;
+}
+.page-3 .songs{
+    display: none;
+    padding-left:10px;
+}.page-3 .songs.active{
+    display: block;
+}
+.page-3 .songs > p{
+    font-size: 12px;
+    color: #888;
+    padding-top: 7px;
+    padding-left: 1px;
+}
 
-
+.page-3 .songs .song-list a{
+    display: block;
+    border-bottom: 1px solid #F1F1F2;
+    position: relative;
+    padding-bottom: 7px;
+    padding-top: 7px;
+}
+.page-3 .songs .song-list a p{
+    font-size: 17px;
+    color: black;
+}
+.page-3 .songs .song-list a span{
+    font-size: 12px;
+    color: #888;
+}
+.page-3 .songs .song-list a .icon-bofang{
+    position: absolute;
+    top: 50%;
+    right: 8px;
+    transform: translateY(-50%);
+}
+.page-3 .songs .no-song{
+    text-align: center;
+}
 .page-1.active,
 .page-2.active,
 .page-3.active{
