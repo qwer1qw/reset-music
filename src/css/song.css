@@ -61,14 +61,10 @@
     /* border: 1px solid transparent; */
     outline: 1px solid transparent;
 }
-.page .disk-container .disk .song-ring,
-.page .disk-container .disk .song-halo,
 .page .disk-container .disk .song-img{
     animation: circle 20s infinite linear running;
     animation-play-state: paused;
 }
-.page .disk-container .disk.playing .song-ring,
-.page .disk-container .disk.playing .song-halo,
 .page .disk-container .disk.playing .song-img{
     animation-play-state: running;
 }
